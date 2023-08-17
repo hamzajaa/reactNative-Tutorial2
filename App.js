@@ -4,9 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.myStyle}>
-        <Text style={styles.blueFont}></Text>
-      </View>
+      <View style={styles.myStyle}></View>
+      <View style={styles.myStyle}></View>
+      <View style={styles.myStyle}></View>
     </View>
   );
 }
@@ -16,8 +16,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   myStyle: {
-    width: "100%", // 100% from parents Component
-    height: 50,
+    width: 100,
+    height: 100,
+    margin: 20,
     backgroundColor: "#F00",
   },
 });

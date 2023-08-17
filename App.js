@@ -4,9 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.textStyle}>
-        Sample Text
-      </Text>
+      <View style={styles.viewStyle1}></View>
+      <View style={styles.viewStyle2}></View>
+        <View style={styles.viewStyle3}></View>
     </View>
   );
 }
@@ -14,23 +14,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: "row",
   },
-  myStyle: {
-    width: 100,
-    height: 100,
-    backgroundColor: "#F00",
-    padding: 20,
+  viewStyle1: {
+    flex: 1,
+    backgroundColor: "#f00"
   },
-  myStyleChild: {
-    width: 20,
-    height: 20,
+  viewStyle2: {
+    flex: 2,
+    backgroundColor: "#00f"
+  },
+  viewStyle3: {
+    flex: 3,
     backgroundColor: "#0f0"
-  },
-  textStyle: {
-    color: "#f00",
-    fontSize: 19,
-    fontWeight: "bold",
-    fontFamily: "sans-serif",
-    textAlign: "center",
   }
+
 });

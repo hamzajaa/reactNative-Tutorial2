@@ -1,11 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { Button } from 'react-native-paper';
 
 export default function App() {
+  const myFunction = () =>{
+    alert("hello world!")
+  }
   return (
     <View style={styles.container}>
-      <View style={{ backgroundColor: "red", width: 100, height: 100 }}>
-        <Text style={{margin: 20, backgroundColor: "#0f0"}}>Sample Text</Text>
-      </View>
+      <Button style={{ backgroundColor: "#0f0" }} onPress={() => myFunction()}>
+        <Text style={{ color: "white" }}>Press me</Text>
+      </Button>
     </View>
   );
 }
@@ -13,6 +17,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 200
   },
-
 });

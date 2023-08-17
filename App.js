@@ -4,9 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.myStyle}></View>
-      <View style={styles.myStyle}></View>
-      <View style={styles.myStyle}></View>
+      <View style={styles.myStyle}>
+        <View style={styles.myStyleChild}></View>
+      </View>
     </View>
   );
 }
@@ -18,7 +18,12 @@ const styles = StyleSheet.create({
   myStyle: {
     width: 100,
     height: 100,
-    margin: 20,
     backgroundColor: "#F00",
+    padding: 20,
   },
+  myStyleChild: {
+    width: 20,
+    height: 20,
+    backgroundColor: "#0f0"
+  }
 });

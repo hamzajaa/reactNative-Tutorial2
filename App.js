@@ -4,9 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.myStyle}>
-        <View style={styles.myStyleChild}></View>
-      </View>
+      <Text style={styles.textStyle}>
+        Sample Text
+      </Text>
     </View>
   );
 }
@@ -25,5 +25,12 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     backgroundColor: "#0f0"
+  },
+  textStyle: {
+    color: "#f00",
+    fontSize: 19,
+    fontWeight: "bold",
+    fontFamily: "sans-serif",
+    textAlign: "center",
   }
 });

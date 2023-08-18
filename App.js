@@ -1,29 +1,16 @@
+import { useState } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { Button } from 'react-native-paper';
 
 export default function App() {
-  const myData = [
-    { id: "1", name: "hamza" },
-    { id: "2", name: "omar" },
-    { id: "3", name: "slah" },
-    { id: "4", name: "yassine" },
-    { id: "5", name: "mustapha" },
-  ]
 
+  let x = 0;
+  const [x2, setX2] = useState(0);
   return (
     <View style={styles.container}>
-      <FlatList
-        data={myData}
-        // numColumns={2}
-        renderItem={({ item }) => {
-          return (
-            <View style={{ backgroundColor: "black", borderRadius: 20, marginVertical: 20, margin: 20, padding: 20 }}>
-              <Text style={{ fontSize: 20, color: "white" }}>{item.name}</Text>
-            </View>
-          )
-        }}
-        keyExtractor={(item) => item.id} // sould be unique
-      />
+      <Button onPress={() => { x++, setX2(x2 + 1) }}> Click me </Button>
+      <Text style={{ paddingLeft: 200, color: "red" }}>{x}</Text>
+      <Text style={{ paddingLeft: 200, color: "green" }}>{x2}</Text>
     </View>
   );
 }
@@ -31,5 +18,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 200,
   },
 });

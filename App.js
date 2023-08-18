@@ -9,7 +9,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Button onPress={() => { x++, setX2(x2 + 1) }}> Click me </Button>
+      <Text style={{ paddingLeft: 150, color: "red" }}>without useState</Text>
       <Text style={{ paddingLeft: 200, color: "red" }}>{x}</Text>
+      <Text style={{ paddingLeft: 160, color: "green" }}>with useState</Text>
       <Text style={{ paddingLeft: 200, color: "green" }}>{x2}</Text>
     </View>
   );

@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import About from './About';
+import Home from './Home';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 export default function App() {
-
-  let x = 0;
-  const [x2, setX2] = useState(0);
   return (
-    <View style={styles.container}>
-      <Button onPress={() => { x++, setX2(x2 + 1) }}> Click me </Button>
-      <Text style={{ paddingLeft: 150, color: "red" }}>without useState</Text>
-      <Text style={{ paddingLeft: 200, color: "red" }}>{x}</Text>
-      <Text style={{ paddingLeft: 160, color: "green" }}>with useState</Text>
-      <Text style={{ paddingLeft: 200, color: "green" }}>{x2}</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="About" component={About} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
